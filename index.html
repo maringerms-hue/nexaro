@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" translate="no" data-scene="put-on" data-state="loading" data-direction="forward">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEXARO — Performance Eyewear</title>
+<meta name="description" content="NEXARO performance eyewear. See further.">
+<meta name="color-scheme" content="dark">
+<meta name="google" content="notranslate">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <a class="hdr__logo display" href="#top" data-nav="top" aria-label="NEXARO, back to start">NEXARO</a>
+  <nav class="hdr__nav" aria-label="Primary">
+    <a href="#shop" data-nav="shop">Shop</a>
+    <a href="#sport" data-nav="sport">Sport</a>
+    <a href="#technology" data-nav="technology">Technology</a>
+    <a href="#story" data-nav="story">About</a>
+  </nav>
+  <div class="hdr__tools">
+    <button type="button" class="hdr__btn" id="btn-search" aria-haspopup="dialog" aria-label="Search"><svg class="hdr__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span class="hdr__label">Search</span></button>
+    <button type="button" class="hdr__btn hdr__account" id="btn-account" aria-haspopup="dialog" aria-label="Account (prototype)"><svg class="hdr__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c.9-4 3.7-6 7.5-6s6.6 2 7.5 6"/></svg><span class="hdr__label">Account</span></button>
+    <button type="button" class="hdr__btn" id="btn-cart" aria-haspopup="dialog" aria-controls="drawer" aria-label="Bag, 0 items"><svg class="hdr__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="hdr__label">Bag (</span><span class="hdr__n" data-cart-count data-n="0">0</span><span class="hdr__label">)</span></button>
+    <button type="button" class="hdr__btn hdr__menu" id="btn-menu" aria-haspopup="dialog" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="stage" id="stage" aria-label="NEXARO cinematic experience">
+    <h1 class="sr-only">NEXARO. Performance eyewear. See further.</h1>
+    <div id="layers" class="layers"></div>
+    <img id="iso" class="iso-glasses" alt="" aria-hidden="true" decoding="async">
+    <div class="stage__scrim" aria-hidden="true"></div>
+
+    <div class="hero-live" id="hero-live">
+      <p class="micro hero-side hero-side--l" aria-hidden="true">Vision<br>moves<br>differently</p>
+      <p class="micro hero-side hero-side--r" aria-hidden="true">Engineered<br>for a<br>brighter<br>tomorrow</p>
+      <div class="hero-live__copy">
+        <p class="micro">Performance eyewear</p>
+        <p class="display hero-live__title">NEXARO</p>
+        <p class="micro hero-live__sub">See further</p>
+        <a class="btn btn--primary" href="#collection" data-nav="collection">Explore collection <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <aside class="panel panel--optics" id="panel-optics" aria-label="Optics">
+      <p class="micro panel__label">Optics</p>
+      <p class="panel__copy" data-spec-copy></p>
+      <dl class="specs" data-spec-rows></dl>
+      <p class="micro panel__note" data-spec-note></p>
+    </aside>
+    <aside class="panel panel--frame" id="panel-frame" aria-label="Frame">
+      <p class="micro panel__label">Frame</p>
+      <p class="panel__copy" data-spec-copy></p>
+      <dl class="specs" data-spec-rows></dl>
+      <p class="micro panel__note" data-spec-note></p>
+    </aside>
+
+    <p class="scroll-hint micro" id="hint"><span>Scroll</span><i aria-hidden="true"></i></p>
+    <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+
+  </section>
+
+  <div class="spacer" aria-hidden="true"></div>
+
+  <div id="more" class="more">
+    <section class="collection" id="collection" aria-label="NEXARO collection">
+      <img class="glow" id="glow-a" alt="" aria-hidden="true">
+      <img class="glow" id="glow-b" alt="" aria-hidden="true">
+      <div class="collection__head">
+        <p class="micro">NEXARO / COLLECTION 01</p>
+        <h2 class="display collection__title">CHOOSE YOUR VISION</h2>
+        <p class="collection__sub">Performance eyewear for every move.</p>
+      </div>
+      <div class="carousel" id="carousel" role="group" aria-roledescription="carousel" aria-label="NEXARO models" tabindex="0">
+        <div class="carousel__track"></div>
+      </div>
+      <div class="carousel__ctrl">
+        <button type="button" class="ctrl" id="btn-prev" aria-label="Previous model">←</button>
+        <p class="micro carousel__count" aria-live="polite"><span id="car-idx">01</span> / <span id="car-n">07</span></p>
+        <button type="button" class="ctrl" id="btn-next" aria-label="Next model">→</button>
+        <p class="micro carousel__cue" aria-hidden="true">Scroll / drag to explore</p>
+      </div>
+      <div class="pinfo" id="pinfo">
+        <div class="pinfo__top">
+          <div class="pinfo__main">
+            <p class="micro" id="pi-activity"></p>
+            <h3 class="display pinfo__name" id="pi-name"></h3>
+          </div>
+          <div class="pinfo__price"><p class="display" id="pi-price"></p><p class="micro">Prototype price</p></div>
+        </div>
+        <p class="pinfo__specs"><span id="pi-frame"></span><span class="pinfo__sep" aria-hidden="true"> · </span><span id="pi-lens"></span></p>
+        <div class="pinfo__cta">
+          <button type="button" class="btn btn--ghost" id="btn-details" aria-haspopup="dialog">View product</button>
+          <button type="button" class="btn btn--primary" id="btn-add">Add to bag <span aria-hidden="true">+</span></button>
+          <a class="collection__all" href="#shop" data-nav="shop">View all models <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop" aria-labelledby="shop-h">
+      <div class="shop__head">
+        <div>
+          <p class="micro">NEXARO / SHOP</p>
+          <h2 class="display shop__title" id="shop-h">FIND YOUR VISION</h2>
+          <p class="shop__sub">Performance eyewear engineered for the way you move.</p>
+        </div>
+        <div class="shop__meta">
+          <p class="display shop__count" id="shop-count"></p>
+          <p class="micro shop__note">* Prototype prices. Names and specifications are placeholders.</p>
+        </div>
+      </div>
+      <div class="toolbar" id="shop-toolbar"></div>
+      <div class="grid" id="shop-grid"></div>
+    </section>
+
+    <section class="sport rail-sec" id="sport" aria-labelledby="rail-h">
+      <div class="rail-sec__head">
+        <p class="micro">NEXARO / SPORT</p>
+        <h2 class="display" id="rail-h">Built for how you move</h2>
+      </div>
+      <div class="rail" id="rail" tabindex="0" role="group" aria-label="Shop by sport"></div>
+    </section>
+
+    <section class="tech" id="technology" aria-labelledby="tech-h">
+      <div class="tech__head">
+        <p class="micro">NEXARO / TECHNOLOGY</p>
+        <h2 class="display" id="tech-h">ENGINEERED TO MOVE</h2>
+      </div>
+      <div class="tech__grid">
+        <article class="tech__panel" id="tech-optics" aria-label="Optics">
+          <div class="tech__media"><img src="assets/images/core-macro-bridge.webp" alt="Macro of the NEXARO lens and nose bridge" loading="lazy" decoding="async"></div>
+          <div class="tech__body"><p class="micro">Optics</p><p class="tech__copy" data-spec-copy></p><dl class="specs" data-spec-rows></dl><p class="micro tech__note" data-spec-note></p></div>
+        </article>
+        <article class="tech__panel" id="tech-frame" aria-label="Frame">
+          <div class="tech__media"><img src="assets/images/core-macro-side.webp" alt="Macro of the NEXARO frame and hinge" loading="lazy" decoding="async"></div>
+          <div class="tech__body"><p class="micro">Frame</p><p class="tech__copy" data-spec-copy></p><dl class="specs" data-spec-rows></dl><p class="micro tech__note" data-spec-note></p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-h" tabindex="-1">
+      <p class="micro">Our story</p>
+      <h2 class="display" id="story-h">Vision moves differently.</h2>
+      <p class="story__p">Performance eyewear engineered for a brighter tomorrow. Precision optics and a lightweight structure, built for speed, distance and changing terrain.</p>
+      <p class="micro story__note">Prototype: models, prices and specification values are placeholders.</p>
+    </section>
+
+    <section class="news" aria-labelledby="news-h">
+      <div>
+        <h2 class="display" id="news-h">SEE WHAT'S NEXT.</h2>
+        <p class="news__p">Product drops, field notes and new perspectives.</p>
+      </div>
+      <form class="news__form" id="news-form" novalidate>
+        <label class="sr-only" for="news-email">Email address</label>
+        <input class="input" id="news-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+        <button type="submit" class="btn btn--primary">Join <span aria-hidden="true">→</span></button>
+        <p class="micro news__status" id="news-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="ftr">
+      <div class="ftr__cols">
+        <nav aria-label="Shop"><p class="micro">Shop</p>
+          <a href="#shop" data-shop-filter="all">All eyewear</a>
+          <a href="#shop" data-shop-filter="Running">Running</a>
+          <a href="#shop" data-shop-filter="Cycling">Cycling</a>
+          <a href="#shop" data-shop-filter="Trail / Mountain">Trail</a></nav>
+        <nav aria-label="Discover"><p class="micro">Discover</p>
+          <a href="#technology" data-nav="technology-section">Technology</a>
+          <a href="#story" data-nav="story">Our Story</a></nav>
+        <nav aria-label="Help"><p class="micro">Help</p>
+          <button type="button" data-open="search">Search</button>
+          <button type="button" data-open="cart">Bag</button></nav>
+        <div class="ftr__brand"><p class="display ftr__logo">NEXARO</p><p class="micro">See further</p></div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="veil" id="veil" hidden></div>
+
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Bag" aria-hidden="true" inert>
+  <div class="drawer__head"><p class="display">Bag</p><button type="button" class="close" data-close>Close</button></div>
+  <div class="drawer__body" id="drawer-body"></div>
+  <div class="drawer__foot" id="drawer-foot" hidden></div>
+</aside>
+
+<div class="dialog dialog--search" id="dlg-search" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <label class="sr-only" for="search-input">Search models</label>
+  <input id="search-input" class="input" type="search" placeholder="Search models or activities" autocomplete="off">
+  <p id="search-status" class="sr-only" role="status"></p>
+  <div id="search-results" class="results"></div>
+  <button type="button" class="close" data-close>Close</button>
+</div>
+
+<div class="dialog dialog--details" id="dlg-details" role="dialog" aria-modal="true" aria-labelledby="dd-name" hidden>
+  <div class="dd__media"><img id="dd-img" alt=""></div>
+  <div class="dd__body">
+    <p class="micro" id="dd-activity"></p>
+    <h2 class="display" id="dd-name"></h2>
+    <p class="dd__price display" id="dd-price"></p>
+    <dl class="specs">
+      <div><dt class="micro">Lens</dt><dd id="dd-lens"></dd></div>
+      <div><dt class="micro">Frame</dt><dd id="dd-frame"></dd></div>
+    </dl>
+    <p class="micro dd__note">Prototype data. Price, name and specifications are placeholders and not yet confirmed.</p>
+    <div class="actions"><button type="button" class="btn btn--primary" id="dd-add">Add to cart <span aria-hidden="true">→</span></button><button type="button" class="btn btn--ghost" data-close>Close</button></div>
+    <a class="link-btn dd__compare" href="#shop" id="dd-compare" data-nav="shop">Compare all models <span aria-hidden="true">↓</span></a>
+  </div>
+</div>
+
+<div class="dialog" id="dlg-account" role="dialog" aria-modal="true" aria-labelledby="ac-title" hidden>
+  <h2 class="display" id="ac-title">Account</h2>
+  <p>Prototype — accounts and sign-in are not configured.</p>
+  <div class="actions"><button type="button" class="btn btn--ghost" data-close>Close</button></div>
+</div>
+
+<div class="dialog" id="dlg-checkout" role="dialog" aria-modal="true" aria-labelledby="co-title" hidden>
+  <h2 class="display" id="co-title">Checkout</h2>
+  <p id="co-summary"></p>
+  <p class="micro">Prototype: no payment provider is connected.</p>
+  <div class="actions"><button type="button" class="btn btn--ghost" data-close>Back to cart</button></div>
+</div>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <button type="button" class="menu__close" data-close>Close</button>
+  <a href="#shop" data-nav="shop">Shop</a>
+  <a href="#sport" data-nav="sport">Sport</a>
+  <a href="#technology" data-nav="technology">Technology</a>
+  <a href="#story" data-nav="story">About</a>
+</div>
+
+<div id="live" class="sr-only" role="status" aria-live="polite"></div>
+<div id="debug" class="debug" hidden></div>
+<div id="bootfb" class="bootfb" hidden><div><p class="display">NEXARO</p><p>The experience could not start. Reload to try again.</p><a class="btn btn--primary" href="">Reload</a></div></div>
+<script>setTimeout(function(){if(!document.documentElement.hasAttribute('data-ready')){var f=document.getElementById('bootfb');if(f)f.hidden=false;}},5000);</script>
+<script src="app.js" defer></script>
+</body>
+</html>
